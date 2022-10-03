@@ -1,0 +1,34 @@
+body{
+    
+}
+.info{
+    display: flex;
+}
+.header{
+    margin: 10px;
+    background-color: aliceblue;
+    display: inline-flex;
+    width: 100%;
+}
+.name{
+    justify-content: center;
+    margin-left: 10px;
+}
+.contact{
+    margin-top: 0px;
+    justify-content: end;
+}
+li{
+    list-style: none;
+}
+img{
+    border-radius: 200px;
+}
+.content{
+    display: flex;
+    justify-content: start;
+}
+h2{
+    display: flex;
+    justify-content: center;
+}
