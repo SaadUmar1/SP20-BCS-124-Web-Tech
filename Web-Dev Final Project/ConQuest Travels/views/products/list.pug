@@ -1,0 +1,36 @@
+extends ../layout
+
+block content 
+  
+    .container.col-lg-10.col-10.text-center
+        h1.fw-light.text-center.text-lg.mt-5(style='') Our Recent Tour Destinations 
+            span.material-symbols-outlined(style='color: green; font-size: 35px')  push_pin
+        hr    
+        p Coming to Pakistan having lots of tourism plans in your mind? Then let us be the reliable companion of your journey. We provide affordable Pakistan tour packages across the country. Either you’re inspired from north Pakistan or even have a dream of historical site's excursion, we're offering comfortable travel and luxurious stay services to visit the best tourist places of Pakistan. 
+        p So, check out our Pakistan tour packages price to keep your budget balanced
+
+    .row    
+        div.products
+            .row.justify-content-center    
+                
+                
+                each product in products 
+                    <div class="card col-lg-4 col-sm-12 m-5" style="width: 18rem;">
+                        img(src=product.img, alt="Card image cap")
+                        <div class="card-body">
+                            h5= product.name
+                            hr
+                            h6.mt-2="Rs "+product.price
+                            hr
+                            p.mt-2= product.description 
+                            div.buttons
+                                        
+                                a(href="products/cart/"+product._id)
+                                    <span class="material-symbols-outlined">shopping_cart</span>
+                                   
+                                a(href="products/edit/"+product._id ) 
+                                    <span class="material-symbols-outlined">edit</span>
+                                a(href="products/delete/"+product._id )
+                                    <span class="material-symbols-outlined">delete</span>          
+                        </div> 
+                    </div>

@@ -1,0 +1,34 @@
+extends ../layout
+
+block content
+    .container.col-lg-10.col-10.text-center
+    h1.fw-light.text-center.text-lg.mt-5(style='') Add New Destination
+    hr.mb-5
+
+
+    form(action="/products/add", method="post" enctype='multipart/form-data')
+        .form-group
+            label.mb-1(for="img") Location's Image
+            input(type='file',class="form-control mb-1", name='img', accept='application/x-zip-compressed,image/*')
+            span.form-text * Upload image *
+        .form-group
+            label.mt-5(for="name") Location's Name 
+            input#name(type="text",class="form-control mb-5", name="name") 
+        .form-group
+            label(for="description") Location's Description
+            textarea#description(type="text",class="form-control mb-5", rows='3', name="description")
+        .form-group
+            label(for="price") Location's Price
+            input#price(type="text",class="form-control mb-5", name="price")
+        .form-group
+            label(for="region") Select Region
+            select#region(class="form-select col-lg-4 col-sm-12 mb-5", aria-label='Default select example', name="region")
+                option(selected='') Select Province
+                option(value='Punjab') Punjab
+                option(value='KPK') KPK
+                option(value='Sindh') Sindh
+                option(value='Balochistan') Balochistan
+                option(value='Gilgit Baltistan') Gilgit Baltistan
+                option(value='Azad Kashmir') Azad Kashmir
+                option(value='Hazara Region') Hazara Region
+        input(type="submit", class="btn btn-info mt-2")

@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+  h3.fw-light.text-center.text-lg.m-5(style='') LOGIN
+  hr
+  form(action="/login", method="post")
+        .form-group
+            label(for="email", class="mt-5") Email 
+            input(type="email",class="form-control", name="email", value='user1@gmail.com') 
+        .form-group
+            label(for="password", class="mt-4") Password
+            input(type="password",class="form-control", name="password", value='user')       
+        .form-group       
+            input(type="submit", class="btn btn-dark mt-5" value="LOGIN")
+        

@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  h3.fw-light.text-center.text-lg.m-5(style='') SIGN UP
+  hr
+  form(action="/signup", method="post")
+        .form-group
+            label(for="name", class="mt-4") Name 
+            input(type="text", class="form-control mt-2", name="name") 
+        .form-group
+        .form-group
+            label(for="email", class="mt-4") Email 
+            input(type="email", class="form-control mt-2", name="email") 
+        .form-group
+            label(for="password", class="mt-4") Password
+            input(type="password", class="form-control", name="password")
+            span.form-text Must be 8-20 characters long.
+        input(type="submit", class="btn btn-dark mt-4" value="SIGNUP")

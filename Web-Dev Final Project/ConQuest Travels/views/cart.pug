@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  .container.col-lg-10.col-10.text-center
+    h1.fw-light.text-center.text-lg.mt-5(style='') Favourite Destinations
+        span.material-symbols-outlined(style='color: green; font-size: 35px') hotel_class 
+  hr      
+  
+  each item in cart
+    .card.mt-5(style='max-height: 250px;')
+      .row.no-gutters
+        .col-md-4
+          img.card-img(src=item.img, alt='...', style='max-height: 250px;')  
+        .col-md-8
+          .card-body
+            h5.card-title= item.name
+            hr
+            p.card-text= item.description  
+            h6.card-text= item.price
+            a.mt-2(href="/products/cart/remove/"+item._id, class="btn btn-dark") Remove
+            
